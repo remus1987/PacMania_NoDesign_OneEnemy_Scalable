@@ -1,0 +1,26 @@
+﻿<Window x:Class="PacMania_OneEnemy_NoGraphics_Scalable.GameArea"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PacMania_OneEnemy_NoGraphics_Scalable"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        Title="GameArea" Height="795" Width="775">
+    <Grid>
+
+        <Canvas Name="Map" Background="Black">
+            <StackPanel Panel.ZIndex="1" Orientation="Vertical">
+                <Grid VerticalAlignment="Top" Width="200" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="SCORE: " FontSize="25" />
+                    <TextBlock Grid.Column="1" x:Name="tbScore" Text="000" FontSize="25"/>
+                </Grid>
+            </StackPanel>
+        </Canvas>
+
+    </Grid>
+</Window>
